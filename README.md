@@ -1,73 +1,183 @@
-# React + TypeScript + Vite
+📌 HR Workflow Designer – React + React Flow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a mini HR Workflow Designer built using React, TypeScript, React Flow, and a modular architecture.
+It allows HR teams to visually design workflows such as onboarding, approvals, document verification, and automated steps.
 
-Currently, two official plugins are available:
+This assignment demonstrates strong understanding of React architecture, scalable code structure, state management, mock APIs, custom nodes, and workflow simulation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🎥 Demo Video
 
-## React Compiler
+Watch the full workflow demo here:
+👉 (Paste your YouTube unlisted link here)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+🖼️ Screenshots
+1️⃣ Workflow Canvas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+![Canvas](./screenshots/canvas.png)](https://drive.google.com/file/d/1K-48zekjWn27_M3K1a5GbHEkaPNpI21K/view?usp=sharing)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2️⃣ Node Drag & Drop
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+![Drag Node](./screenshots/drag.png)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3️⃣ Node Form Panel
+<img width="1918" height="899" alt="Screenshot 2025-12-11 103159" src="https://github.com/user-attachments/assets/7aac1fce-b051-49ee-a80c-7b5251c53532" />
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+
+4️⃣ Workflow Simulation Output
+<img width="1918" height="854" alt="Screenshot 2025-12-11 103337" src="https://github.com/user-attachments/assets/af2e570f-d3f7-4fba-81b9-6d784019868b" />
+
+
+
+🚀 Features
+✔ Drag-and-Drop Workflow Builder
+
+Create workflows visually
+
+Node types:
+
+Start Node
+
+Task Node
+
+Approval Node
+
+Automated Step Node
+
+End Node
+
+✔ Node Configuration Panel
+
+Each node is editable through a form panel:
+
+Start → title + metadata
+
+Task → title, description, assignee, due date
+
+Approval → approver role, auto-approve limit
+
+Automated → select action + dynamic params
+
+End → message + summary toggle
+
+✔ Mock API Integration
+
+GET /automations → returns automation actions
+
+POST /simulate → simulates workflow execution and returns steps
+
+✔ Workflow Simulation Panel
+
+Serializes current flow
+
+Sends to mock API
+
+Displays execution log
+
+Basic validation included
+
+🧩 Project Structure
+src/
+│── components/
+│   ├── FlowCanvas.tsx
+│   ├── Sidebar.tsx
+│   └── Forms/
+│       ├── StartForm.tsx
+│       ├── TaskForm.tsx
+│       ├── ApprovalForm.tsx
+│       ├── AutomatedForm.tsx
+│       └── EndForm.tsx
+│── api/
+│   └── automations.ts
+│── App.tsx
+│── main.tsx
+│── index.css
+
+⚙️ Tech Stack
+
+React (Vite + TypeScript)
+
+React Flow
+
+Tailwind CSS
+
+Mock API (local / MSW / json-server)
+
+Modular component architecture
+
+📐 Architecture & Design Decisions
+1. Modular Node System
+
+Each node type has its own form + logic → scalable.
+
+2. Central Workflow State
+
+React Flow handles:
+
+nodes
+
+edges
+
+selection
+
+updates
+
+3. Clean Separation of Concerns
+
+Canvas logic
+
+Form logic
+
+API logic
+sab alag-alag folders me.
+
+4. Extensible Node Forms
+
+Forms follow same pattern → easy future additions.
+
+5. Mock API Layer
+
+All API calls isolated under /api.
+
+🏃‍♂️ How to Run the Project
+1️⃣ Install dependencies
+npm install
+
+2️⃣ Run the app
+npm run dev
+
+3️⃣ (If using mock server)
+npm run server
+
+🧪 Completed for the Assignment
+
+✔ Fully functioning workflow builder
+✔ Custom node types
+✔ Editable forms
+✔ React Flow integration
+✔ Mock API integration
+✔ Workflow simulator
+✔ Clean folder architecture
+✔ Professional README
+
+🚀 Future Enhancements (Optional)
+
+Undo/Redo functionality
+
+Auto-layout of nodes
+
+Minimap inside canvas
+
+Visual error indicators on nodes
+
+Node version history
+
+Workflow import/export
+
+👨‍💻 Author
+
+Nitish Kumar
+GitHub: https://github.com/CoderNinjaNitish
