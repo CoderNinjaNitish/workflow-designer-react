@@ -15,12 +15,13 @@ Watch the full workflow demo here:
 1️⃣ Workflow Canvas
 
 
-![Canvas](./screenshots/canvas.png)](https://drive.google.com/file/d/1K-48zekjWn27_M3K1a5GbHEkaPNpI21K/view?usp=sharing)
+<img width="1913" height="913" alt="Screenshot 2025-12-11 103146" src="https://github.com/user-attachments/assets/ac492dbb-8e8a-499a-807f-c9f60d9a7584" />
+
 
 2️⃣ Node Drag & Drop
 
 
-![Drag Node](./screenshots/drag.png)
+
 
 3️⃣ Node Form Panel
 <img width="1918" height="899" alt="Screenshot 2025-12-11 103159" src="https://github.com/user-attachments/assets/7aac1fce-b051-49ee-a80c-7b5251c53532" />
