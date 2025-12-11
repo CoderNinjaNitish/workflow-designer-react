@@ -8,7 +8,7 @@ This assignment demonstrates strong understanding of React architecture, scalabl
 🎥 Demo Video
 
 Watch the full workflow demo here:
-👉 (Paste your YouTube unlisted link here)
+👉https://youtu.be/IZUklYfIabs?si=1R16fhADIEnOS9su
 
 
 🖼️ Screenshots
