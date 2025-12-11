@@ -1,0 +1,101 @@
+/* src/index.css — tuned for the workflow builder app */
+
+/* --- Reset / base layout for full-screen canvas --- */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #0b0f19; /* dark canvas background */
+  color: rgba(255,255,255,0.9);
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+/* carry over your root theme settings */
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+}
+
+/* anchors and buttons */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover { color: #535bf2; }
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.5rem 0.9rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #111827;
+  color: #fff;
+  cursor: pointer;
+}
+button:hover { border-color: #646cff; }
+button:focus { outline: 4px auto -webkit-focus-ring-color; }
+
+/* make sure body doesn't center everything — we want full layout control in App.tsx */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: block;
+}
+
+/* --- App layout helpers used by App.tsx --- */
+.app-root {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  gap: 0;
+}
+
+/* Sidebar */
+.app-sidebar {
+  width: 220px;
+  background: #0f1724;
+  color: #fff;
+  padding: 12px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Canvas container (ReactFlow host) */
+.app-canvas {
+  flex: 1;
+  position: relative;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  overflow: hidden;
+}
+
+/* Right properties panel */
+.app-panel {
+  width: 320px;
+  background: #071023;
+  color: #fff;
+  border-left: 1px solid rgba(255,255,255,0.03);
+  box-sizing: border-box;
+  padding: 12px;
+  overflow-y: auto;
+}
+
+/* small utilities */
+.kv-label { font-size: 13px; color: #d1d5db; display:block; margin-bottom:6px; }
+.input-sm { width:100%; padding:8px; border-radius:6px; border:1px solid rgba(255,255,255,0.06); background:#0b1220; color:#fff; }
+.btn-ghost { background: transparent; border: 1px solid rgba(255,255,255,0.04); color: #fff; padding: 8px 10px; border-radius: 6px; }
+
+/* small responsive tweak */
+@media (max-width: 900px) {
+  .app-sidebar { display: none; }
+  .app-panel { display: none; }
+  .app-canvas { width: 100vw; }
+}

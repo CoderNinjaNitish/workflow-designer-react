@@ -1,0 +1,43 @@
+/* Clean App.css for workflow builder */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #0b0f19; /* dark background */
+  font-family: system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* card look */
+.card-node {
+  min-width: 220px;
+  max-width: 300px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  color: #111; /* change for dark backgrounds as needed */
+  border: 1px solid rgba(0,0,0,0.08);
+  font-family: Inter, system-ui, Arial;
+}
+
+/* if you use dark backgrounds for nodes, allow white text */
+.card-node[style*="background: #"] { /* no-op; used as hint */
+}
+
+/* small tweak to reactflow handles */
+.react-flow__handle {
+  background: #111 !important;
+  border: 2px solid #fff !important;
+}
+.card-node {
+  min-width: 220px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  border: 1px solid rgba(0,0,0,0.06);
+  font-family: Inter, system-ui, Arial;
+}
